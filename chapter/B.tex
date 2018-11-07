@@ -1,0 +1,245 @@
+% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+\chapter{Plexifications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Cayley-Dickson construction is a method to generate a larger algebra $\mathcal{C}(\mathcal{A})$ given an initial algebra $\mathcal{A}$. Here ``algebra'' is used very loosely.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pairs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $a$ and $b$ be members of $\mathcal{A}$. A member $z$ of the Cayley Dickson construct $\mathcal{C}(\mathcal{A})$ is an \textbf{ordered-pair}
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+A Cayley-Dickson construct is not quite a tensor product of $\mathcal{A}$ with itself. The operations involving members of $\mathcal{C}(\mathcal{A})$ can be defined in terms of the analogous operations involving members of $\mathcal{A}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Addition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{addition} operation works as expected: the sum of two pairs $z_{1}$ and $z_{2}$ is just the pair of additions. That is, if
+\begin{align*}
+    z_{1} &= \begin{pmatrix}
+        a_{1} & b_{1}
+    \end{pmatrix} &
+    z_{2} &= \begin{pmatrix}
+        a_{2} & b_{2}
+    \end{pmatrix}
+\end{align*}
+then
+\begin{equation}
+    z_{1} + z_{2} = \begin{pmatrix}
+        a_{1} + a_{2} & b_{1} + b_{2}
+    \end{pmatrix}
+\end{equation}
+Note that addition is a symmetric operation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Scalar Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{scalar multiplication} operation is also as expected: scaling $z$ by a scalar $c$ is just the pair of scalings. That is, if
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then
+\begin{equation}
+    cz = \begin{pmatrix}
+        ca & cb
+    \end{pmatrix}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Negation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{negation} operation is a special case of scalar multiplication. If
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then
+\begin{equation}
+    {-z} = \begin{pmatrix}
+        -a & -b
+    \end{pmatrix}
+\end{equation}
+Note that negation is an involutive operation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Subtraction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You can always define the \textbf{subtraction} operation in terms of addition and negation. That is, if
+\begin{align*}
+    z_{1} &= \begin{pmatrix}
+        a_{1} & b_{1}
+    \end{pmatrix} &
+    z_{2} &= \begin{pmatrix}
+        a_{2} & b_{2}
+    \end{pmatrix}
+\end{align*}
+then
+\begin{equation}
+    z_{1} - z_{2} = \begin{pmatrix}
+        a_{1} - a_{2} & b_{1} - b_{2}
+    \end{pmatrix}
+\end{equation}
+Note that addition is an anti-symmetric operation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asterisk Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{asterisk conjugate} operation on a member of the Cayley-Dickson construct on $\mathcal{A}$ can be stated in terms of negation and asterisk conjugate operations on members of $\mathcal{A}$. Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then
+\begin{equation}
+    z^{\ast} = \begin{pmatrix}
+        a^{\ast} & -b
+    \end{pmatrix}
+\end{equation}
+Note that asterisk conjugation is an involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Nilplexification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A parabolic Cayley-Dickson construct will introduce elements that square to zero. This will lead to zero-divisors.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given two members
+\begin{align*}
+    z_{1} &= \begin{pmatrix}
+        a_{1} & b_{1}
+    \end{pmatrix} &
+    z_{2} &= \begin{pmatrix}
+        a_{2} & b_{2}
+    \end{pmatrix}
+\end{align*}
+then the \textbf{parabolic multiplication} operation is
+\begin{equation}
+    z_{1} \wedge z_{2} = \begin{pmatrix}
+        a_{1} \wedge a_{2} & b_{2} \wedge a_{1} + a_{2} \wedge b_{1}^{\ast}
+    \end{pmatrix}
+\end{equation}
+Note that the order here is very important. In some cases, this product will be commutative and/or associative, but not always.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quadrance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then the \textbf{parabolic quadrance} of $z$ is
+\begin{equation}
+    \Vert z \Vert^{2} \equiv \Vert a \Vert^{2} = z \wedge z^{\ast} = z^{\ast} \wedge z
+\end{equation}
+That is, the quadrance of $z$ is the same as the quadrance of the first element of $z$. In this way it is clear that if $a$ has zero quadrance, then $z$ will have zero quadrance and no inverse.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cloak and Dagger Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{cloak and dagger conjugate} operations on a member of the parabolic Cayley-Dickson construct on $\mathcal{A}$ can be stated in terms of cloak and dagger conjugate operations on members of $\mathcal{A}$. Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then
+\begin{align}
+    z^{\diamond} &= \begin{pmatrix}
+        a^{\diamond} & b^{\dagger}
+    \end{pmatrix} &
+    z^{\dagger} &= \begin{pmatrix}
+        a^{\dagger} & b^{\diamond}
+    \end{pmatrix}
+\end{align}
+The cloak and dagger conjugates are involutions. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hodge Star}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textbf{Hodge star} operation on a member of the parabolic Cayley-Dickson construct on $\mathcal{A}$ can be stated in terms of dagger conjugate and Hodge star operations on members of $\mathcal{A}$. Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then
+\begin{equation}
+     z^{\star} = \begin{pmatrix}
+         (b^{\star})^{\dagger} &  a^{\star}
+    \end{pmatrix}
+\end{equation}
+The Hodge star operation is not always an involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Complexification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+An elliptic Cayley-Dickson construct will introduce elements that square to minus one. This might lead to zero-divisors, eventually.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given two members
+\begin{align*}
+    z_{1} &= \begin{pmatrix}
+        a_{1} & b_{1}
+    \end{pmatrix} &
+    z_{2} &= \begin{pmatrix}
+        a_{2} & b_{2}
+    \end{pmatrix}
+\end{align*}
+then the \textbf{elliptic multiplication} operation is
+\begin{equation}
+    z_{1} \wedge z_{2} = \begin{pmatrix}
+        a_{1} \wedge a_{2} - b_{2}^{\ast} \wedge b_{1} & b_{2} \wedge a_{1} + a_{2} \wedge b_{1}^{\ast}
+    \end{pmatrix}
+\end{equation}
+Note that the order here is very important. In some cases, this product will be commutative and/or associative, but not always.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quadrance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then the \textbf{elliptic quadrance} of $z$ is
+\begin{equation}
+    \Vert z \Vert^{2} \equiv \Vert a \Vert^{2} + \Vert b \Vert^{2} = z \wedge z^{\ast} = z^{\ast} \wedge z
+\end{equation}
+That is, the quadrance of $z$ is the sum of the quadrance of the elements of $z$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Perplexification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A hyperbolic Cayley-Dickson construct will introduce elements that square to one. This will lead to zero-divisors.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given two members
+\begin{align*}
+    z_{1} &= \begin{pmatrix}
+        a_{1} & b_{1}
+    \end{pmatrix} &
+    z_{2} &= \begin{pmatrix}
+        a_{2} & b_{2}
+    \end{pmatrix}
+\end{align*}
+then the \textbf{hyperbolic multiplication} operation is
+\begin{equation}
+    z_{1} \wedge z_{2} = \begin{pmatrix}
+        a_{1} \wedge a_{2} + b_{2}^{\ast} \wedge b_{1} & b_{2} \wedge a_{1} + a_{2} \wedge b_{1}^{\ast}
+    \end{pmatrix}
+\end{equation}
+Note that the order here is very important. In some cases, this product will be commutative and/or associative, but not always.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quadrance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Given
+\begin{equation}
+    z = \begin{pmatrix}
+        a & b
+    \end{pmatrix}
+\end{equation}
+then the parabolic quadrance of $z$ is
+\begin{equation}
+    \Vert z \Vert^{2} \equiv \Vert a \Vert^{2} - \Vert b \Vert^{2} = z \wedge z^{\ast} = z^{\ast} \wedge z
+\end{equation}
+That is, the quadrance of $z$ is the difference of the quadrance of the elements of $z$.

@@ -1,0 +1,103 @@
+% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+\chapter{Reals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The real numbers are the set of familiar numbers. There are integers, rationals, and irrationals.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Arithmetic Operations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For future reference, here you can find the familiar arithmetic operations on real numbers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Addition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The addition operation is familiar. If $a$ and $b$ are two real numbers, then the result $c$ of the addition of $a$ and $b$ is also a real number:
+\begin{equation}
+    c = a + b
+\end{equation}
+There is an element $0$ in the reals called zero that does not contribute to the addition:
+\begin{equation}
+    a = a + 0 = 0 + a
+\end{equation}
+Note that zero does not have a sign.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The multiplication operation is also familiar. If $a$ and $b$ are two real numbers, then the result $c$ of the multiplication of $a$ and $b$ is also a real number:
+\begin{equation}
+    c = a \wedge b
+\end{equation}
+There is an element $1$ in the reals called one that does not contribute to the multiplication:
+\begin{equation}
+    a = a \wedge 1 = 1 \wedge a
+\end{equation}
+Note that one is positive.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Negation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+There is an element $-1$ in the reals that when multiplied with a real number $a$ gives the negative of $a$:
+\begin{equation}
+    {-a} = a \wedge {-1} = {-1} \wedge a
+\end{equation}
+Note that one is negative. This operation is a 2-involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjugation Operations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The conjugation operations on real numbers are trivial, but are needed for Cayley-Dickson construct where they lead to non-trivial conjugations.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asterisk Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The asterisk conjugate operation on a real number $a$ is itself:
+\begin{equation}
+    a^{\ast} = a
+\end{equation}
+That is, all real numbers are asterisk-self-conjugate. This operation is trivially a 2-involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quadrance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The quadrance of a real number $a$ is defined as the product of $a$ and the asterisk conjugate of $a$:
+\begin{equation}
+    \Vert a \Vert^{2} = a^{2} = a \wedge a^{\ast} = a^{\ast} \wedge a
+\end{equation}
+Note that the quadrance of any non-zero real number is positive, and that zero is the only real number with zero quadrance.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cloak Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The cloak conjugate operation on a real number $a$ is equivalent to the negation operation:
+\begin{equation}
+    a^{\diamond} = {-a}
+\end{equation}
+This operation is a 2-involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dagger Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The dagger conjugate operation on a real number $a$ is itself:
+\begin{equation}
+    a^{\dagger} = a
+\end{equation}
+That is, all real numbers are dagger-self-conjugate. This operation is trivially a 2-involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hodge Star}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Hodge star operation on a real number $a$ is itself:
+\begin{equation}
+    a^{\star} = a
+\end{equation}
+That is, all real numbers are star-self-conjugate. This operation is trivially a 2-involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Differential Operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You can define a real variable $z$ and a \textbf{Wirtinger} differential operator $\nabla$ such that
+\begin{equation}
+    \nabla \wedge z = 1
+\end{equation}
+That is,
+\begin{equation}
+    \nabla = \frac{\partial}{\partial z}
+\end{equation}
+Since real numbers are asterisk-self-conjugate, the asterisk Wirtinger differential operator $\nabla^{\ast}$ is equivalent to $\nabla$:
+\begin{equation}
+    \nabla^{\ast} = \nabla
+\end{equation}
+The quadrance of the Wirtinger differential operator is the \textbf{Laplace} differential operator:
+\begin{equation}
+    \Vert \nabla \Vert^{2} = \frac{\partial^{2}}{\partial z^{2}} = \nabla \wedge \nabla^{\ast} = \nabla^{\ast} \wedge \nabla
+\end{equation}
